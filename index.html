@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集昇華實驗室 🧪🫧</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 核心視覺設定 --- */
+        :root {
+            --primary: #F6A6C1;
+            --accent: #E85D8F;
+            --purple: #C9B8FF;
+            --blue: #AEE3F5;
+            --bg: #FFF7FB;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --glass: rgba(255, 255, 255, 0.65);
+            --shadow: 0 10px 30px rgba(232, 93, 143, 0.1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+        h1, h2, h3, .nav-logo, .btn-cta { font-family: 'Zen Maru Gothic', sans-serif; }
+        
+        /* --- 背景氣泡 --- */
+        .bubbles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .bubble { position: absolute; bottom: -100px; border-radius: 50%; animation: floatUp linear infinite; opacity: 0.2; }
+        @keyframes floatUp { 0% { transform: translateY(0); } 100% { transform: translateY(-120vh); } }
+
+        /* --- 導覽列 --- */
+        nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255, 247, 251, 0.8); backdrop-filter: blur(10px); padding: 15px 0; }
+        .nav-container { width: 90%; max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { color: var(--accent); font-weight: 900; }
+
+        /* --- Hero 主視覺 --- */
+        #hero { padding-top: 120px; text-align: center; }
+        .hero-kv { display: flex; justify-content: center; margin-bottom: -40px; position: relative; z-index: 3; }
+        .hero-kv img { width: 85%; max-width: 500px; border-radius: 24px; box-shadow: var(--shadow); animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+        /* --- 通用區塊 --- */
+        .container { width: 90%; max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+        .section { padding: 80px 0; }
+        .glass-card { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid white; border-radius: 24px; padding: 40px 24px; box-shadow: var(--shadow); margin-bottom: 30px; }
+        .title { text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: var(--accent); }
+        .highlight { color: var(--accent); font-weight: 700; }
+
+        /* --- 課程資訊卡片 --- */
+        .info-box { background: white; padding: 25px; border-radius: 20px; border: 2px solid var(--primary); }
+        .info-row { border-bottom: 1px dashed #eee; padding: 10px 0; display: flex; }
+        .info-label { font-weight: 700; color: var(--accent); width: 80px; }
+
+        /* --- 適合誰泡泡 --- */
+        .bubble-item { background: white; padding: 15px 20px; border-radius: 50px; border: 1px solid var(--blue); margin-bottom: 15px; }
+
+        /* --- 按鈕 --- */
+        .btn-cta { display: inline-block; background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 16px 40px; border-radius: 50px; font-weight: 700; margin-top: 20px; cursor: pointer; border: none; }
+        .btn-cta:hover { transform: scale(1.05); }
+
+        /* --- FAQ --- */
+        .faq-item { background: white; border-radius: 15px; margin-bottom: 10px; cursor: pointer; }
+        .faq-q { padding: 20px; font-weight: 700; display: flex; justify-content: space-between; }
+        .faq-a { max-height: 0; overflow: hidden; transition: 0.3s; padding: 0 20px; color: var(--text-sub); }
+        .faq-item.active .faq-a { max-height: 200px; padding-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="bubbles">
+        <div class="bubble" style="width:50px; height:50px; left:10%; background:var(--primary); animation-duration:15s;"></div>
+        <div class="bubble" style="width:30px; height:30px; left:80%; background:var(--blue); animation-duration:10s;"></div>
+    </div>
+
+    <nav><div class="nav-container"><a href="#hero" class="nav-logo">作品集昇華實驗室 🧪</a></div></nav>
+
+    <header id="hero">
+        <div class="container">
+            <div class="hero-kv"><img src="kv.jpg" alt="主視覺"></div>
+            <div class="glass-card">
+                <h1>作品集昇華實驗室 🧪🫧</h1>
+                <p class="highlight" style="margin: 10px 0;">一起開搞你的第一份作品集吧！</p>
+                <p>把履歷裡的條列，<br>昇華成「看得懂、讀得下去」的經驗 ✨</p>
+                <a href="https://forms.gle/knYE1XZRMV4iqNQL9" class="btn-cta">👉 立即進入實驗室</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section"><div class="container">
+        <h2 class="title">實驗室理念</h2>
+        <div class="glass-card" style="text-align: center;">
+            我們平常說的「昇華」，是不是會想到小學自然課本裡那個——固態直接變成氣態的神奇過程？<br><br>
+            作品集其實也是一樣的概念ㄛ！你做過的社團、校園大使、實習、專案，原本可能只是履歷上的一條一條。<br><br>
+            但經過整理、拆解、重新說清楚之後，<br>
+            ✨ <span class="highlight">它們可以昇華成一份「看得懂、記得住、會被翻回來問」的經驗。</span>
+        </div>
+    </div></section>
+
+    <section class="section" style="background: white;"><div class="container">
+        <h2 class="title">關於我</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <p>哈囉大家！我是大魚（IG：<a href="https://instagram.com/studiii_yuuu" target="_blank" style="color:var(--accent)">@studiii_yuuu</a>）👋</p>
+            <p>去年這個時候，我對履歷與作品集幾乎是零概念；在 2025 上半年整理後，獲得 5 場面試、3 個實習 offer。</p>
+        </div>
+        <div class="info-box">
+            <p>• 2 份校園大使經歷 / 2 個正在進行中的實習</p>
+            <p>• 2 個大型活動籌備幹部</p>
+            <p>• 2 場商業競賽：佳作與全國第三名</p>
+        </div>
+    </div></section>
+
+    <section class="section"><div class="container">
+        <div class="glass-card">
+            <h3 style="margin-bottom: 15px;">關於這次的實驗室</h3>
+            <p>去年這個時候，我完全不知道作品集跟履歷要幹嘛。甚至覺得：「這不是設計系才要用的嗎？」一年後，狠狠打臉我自己 🥲</p><br>
+            <p>我花了將近 4 個月磨出第一份作品集。走過很多彎路，但也因為夠紮實，在面試時能讓 HR 記住我。現在，我想陪你一起完成你的第一份作品集！🧪✨</p>
+        </div>
+    </div></section>
+
+    <section class="section" style="background: white;"><div class="container">
+        <h2 class="title">適合誰</h2>
+        <div class="bubble-item">🫧 大學階段，我該怎麼累積經歷，讓作品集慢慢長出來？</div>
+        <div class="bubble-item">🫧 到底要放哪些內容，又該怎麼寫，才會讓人願意看下去？</div>
+        <div class="bubble-item">🫧 已經做了很多事，卻不知道怎麼篩選、怎麼再往前一步？</div>
+    </div></section>
+
+    <section class="section"><div class="container">
+        <h2 class="title">你會學到</h2>
+        <div class="glass-card">
+            <p>✨ 作品集該／不該放入哪些元素</p>
+            <p>✨ 大學階段如何累積作品集，豐富自己的人設</p>
+            <p>✨ 如何運用 AI 修改你的專屬作品集</p>
+        </div>
+    </div></section>
+
+    <section id="info" class="section" style="background: white;"><div class="container">
+        <h2 class="title">課程資訊</h2>
+        <div class="info-box">
+            <div class="info-row"><div class="info-label">📍 形式</div><div>線上 Google Meet</div></div>
+            <div class="info-row"><div class="info-label">⏱️ 時長</div><div>60 分鐘（含 Q&A）</div></div>
+            <div class="info-row"><div class="info-label">👥 名額</div><div>限額 20 人</div></div>
+            <div class="info-row"><div class="info-label">💰 費用</div><div>400 元</div></div>
+            <div class="info-row"><div class="info-label">📅 時間</div><div>2026／2／13（五）15:00–16:00</div></div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://forms.gle/knYE1XZRMV4iqNQL9" class="btn-cta">👉 立即進入實驗室</a>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="section"><div class="container">
+        <h2 class="title">實驗室補給包 🧫</h2>
+        <div class="glass-card">
+            <p class="highlight">🌟 作品集專用 Canva 模板</p>
+            <p>直接建立副本開始製作，省去在模板海洋裡選擇困難的時間！</p><br>
+            <p class="highlight">🌟 作品集回饋 2 次</p>
+            <p>3／10 前完成初稿，可以 IG 私訊我獲得回饋。⏰ 超過期限就沒有嘍！</p>
+        </div>
+    </div></section>
+
+    <section class="section" style="background: white;"><div class="container">
+        <h2 class="title">FAQ</h2>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-q">Q：適合哪些人報名？ <span>▼</span></div>
+            <div class="faq-a">如果你是大學生、正在準備實習，或對作品集感到焦慮的人都很適合 🧪</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-q">Q：如果我完全沒有作品集，也可以參加嗎？ <span>▼</span></div>
+            <div class="faq-a">可以！這堂課就是設計給「還沒有作品集」的人。我們會從材料盤點開始。</div>
+        </div>
+        <div class="faq-item" onclick="this.classList.toggle('active')">
+            <div class="faq-q">Q：臨時有事不能參加怎麼辦？ <span>▼</span></div>
+            <div class="faq-a">請務必提前一天告知，我會協助全額退款～若無故缺席將無法報名後續活動。</div>
+        </div>
+    </div></section>
+
+    <footer style="text-align: center; padding: 60px 0;">
+        <div class="container">
+            <p>聯絡方式：IG 私訊小盒子 <a href="https://instagram.com/studiii_yuuu" style="color:var(--accent)">@studiii_yuuu</a></p>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 20px;">＊本活動為一人作業、名額有限，請確認時間後再報名 🤍</p>
+            <a href="https://forms.gle/knYE1XZRMV4iqNQL9" class="btn-cta">👉 立即進入實驗室</a>
+        </div>
+    </footer>
+
+</body>
+</html>
